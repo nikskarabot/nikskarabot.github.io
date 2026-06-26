@@ -1,3 +1,9 @@
+---
+layout: default
+title: Daljinsko voden model avtomobila
+---
+
+
 # Daljinsko voden model avtomobila
 
 
