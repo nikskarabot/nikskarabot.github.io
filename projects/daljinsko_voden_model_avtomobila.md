@@ -46,11 +46,21 @@ Ta projekt je bil razvit v sklopu diplomske naloge. Pri tem sem naredil vse od p
 - izdelan popolnoma nov sistem paketnega komuniciranja
 - merjenje nivoja baterije....
 
+## Izdelava
+
+{% for image in site.static_files %}
+{% if image.path contains 'projects/dvma/slike' %}
+
+<img src="{{ image.path }}" width="250">
+
+{% endif %}
+{% endfor %}
+
 
 ## Koda
 
-[GitHub Repository](https://github.com/nikskarabot/Diploma)
-[GitHub Repository](https://github.com/nikskarabot/AppDiploma)
+[C koda](https://github.com/nikskarabot/Diploma)
+[Python aplikacija](https://github.com/nikskarabot/AppDiploma)
 
 ## Diplomsko delo
 
