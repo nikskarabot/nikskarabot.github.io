@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<h1>Nik Škarabot</h1>
+	<p>univ. dipl. inž. el<p>
+
+	<div class="project">
+		<h2>Daljinsko voden model avtomobila</h2>
+		<p>Projekt je bil razvit v sklopu diplomske naloge.</p>
+
+		<h3>Strojna oprema</h3>
+		<ul>
+		<li>ATmega328P</li>
+		<li>nRF24L01</li>
+		<li>NEO-6M GPS module</li>
+		<li>ESC</li>
+		<li>servomotor</li>
+		<li>enkoderji, tipke, joystick-i</li>
+		<li>OLED zaslon</li>
+		</ul>
+
+		<h3>Programska oprema</h3>
+		<ul>
+		<li>programski jezik C</li>
+		<li>Visual Studio Code</li>
+		<li>PlatformIO</li>
+		<li>KiCad</li>
+		<li>Inventor Professional</li>
+		</ul>
+
+		<button onclick="openGallery('project1')">
+			📷 Gallery
+		</button>
+	</div>
+
+	<div class="project">
+		<h2>Enostaven RC-avtomobil</h2>
+		<p>Projekt narejen v srednji šoli.</p>
+
+		<h3>Strojna oprema**</h3>
+		<ul>
+		<li>Arduino Nano</li>
+		<li>Gonilnik motorjev L298N</li>
+		<li>servomotor</li>
+		<li>LED diode</li></ul> 
+
+		<h3>Programska oprema</h3>
+		<ul><li>Arduino okolje</li></ul>
+
+		<button onclick="openGallery('project2')">
+			📷 Gallery
+		</button>
+	</div>
+
+	<div class="project">
+		<h2>Napetostni usmernik</h2>
+		<p>Projekt narejen v srednji šoli.</p>
+
+		<ul>
+		<li>Zaspajkan kupljeni kit usmerniškega vezja.</li> 
+		<li>Sestava in povezava vseh delov (transformator, vezje, številčni prikaz, potentiometri, itd.)</li>
+		<li>Izdelava ohišja.</li>
+		</ul>
+
+		<button onclick="openGallery('project2')">
+			📷 Gallery
+		</button>
+	</div>
+
+
+	<!-- Gallery Modal -->
+	<div id="modal" class="modal">
+		<span onclick="closeGallery()" class="close">✕</span>
+		<img id="modalImg">
+		<a class="prev" onclick="change(-1)">❮</a>
+		<a class="next" onclick="change(1)">❯</a>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

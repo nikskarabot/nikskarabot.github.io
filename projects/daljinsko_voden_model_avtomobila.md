@@ -3,8 +3,6 @@ layout: default
 title: Daljinsko voden model avtomobila
 ---
 
-<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 
 # Daljinsko voden model avtomobila
 
@@ -50,15 +48,7 @@ Ta projekt je bil razvit v sklopu diplomske naloge. Pri tem sem naredil vse od p
 
 ## Izdelava
 
-{% for file in site.static_files %}
-{% if file.path contains 'dvma/slike' %}
-
-<a href="{{ file.path }}" data-lightbox="avto">
-    <img src="{{ file.path }}" width="180">
-</a>
-
-{% endif %}
-{% endfor %}
+[📷 Poglej si slike projekta v galeriji](project1-gallery.html)
 
 
 ## Koda
