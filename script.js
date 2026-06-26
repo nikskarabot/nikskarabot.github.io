@@ -4,13 +4,15 @@ let index = 0;
 function openGallery(project) {
   images = [];
 
-  // assume images are numbered 1–10 (simple + fast)
-  for (let i = 1; i < 10; i++) {
-    const img = "assets/dvma/slike/${i}.jpg";
-    images.push(img);
+  const base = `assets/${project}/slike`;
+
+  // try loading images 1–20 (adjust if needed)
+  for (let i = 1; i <= 20; i++) {
+    images.push(`${base}/${i}.jpg`);
   }
 
   index = 0;
+
   document.getElementById("modal").style.display = "block";
   document.getElementById("modalImg").src = images[index];
 }

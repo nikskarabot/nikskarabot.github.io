@@ -60,18 +60,19 @@ ul {
 
 /* BUTTON (slight accent, not neon) */
 button {
-  background: #2b6cff;
-  color: white;
-  border: none;
-  padding: 10px 14px;
+  background: transparent;
+  color: #cbd5e1;
+  border: 1px solid #2b6cff;
+  padding: 9px 13px;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 500;
   transition: 0.2s ease;
+  font-weight: 500;
 }
 
 button:hover {
-  background: #1f56d6;
+  background: #2b6cff;
+  color: white;
   transform: translateY(-1px);
 }
 
