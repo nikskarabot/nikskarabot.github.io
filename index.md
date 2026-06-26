@@ -24,4 +24,4 @@ Projekt je bil razvit v sklopu diplomske naloge.
 - KiCad
 - Inventor Professional
 
-[Več o projektu](projects/daljinsko_voden_avtomobila.md)
+[Več o projektu](projects/daljinsko_voden_avtomobila.html)
