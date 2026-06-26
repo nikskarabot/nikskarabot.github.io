@@ -49,7 +49,7 @@ Ta projekt je bil razvit v sklopu diplomske naloge. Pri tem sem naredil vse od p
 ## Izdelava
 
 {% for image in site.static_files %}
-{% if image.path contains 'projects/dvma/slike' %}
+{% if image.path contains 'dvma/slike' %}
 
 <img src="{{ image.path }}" width="250">
 
