@@ -6,7 +6,7 @@ function openGallery(project) {
 
   // assume images are numbered 1–10 (simple + fast)
   for (let i = 1; i < 10; i++) {
-    const img = 'assets/dvma/slike/${i}.png';
+    const img = "assets/dvma/slike/${i}.jpg";
     images.push(img);
   }
 
