@@ -2,50 +2,26 @@
 
 ## dipl. inž. el. (UN)
 
-Welcome to my engineering portfolio.
-
-I work with:
-
-- C / C++
-- STM32
-- FreeRTOS
-- Embedded Linux
-- CAN Bus
-- Hardware bring-up
-
-
 ## Projects
 
-### STM32 CAN Logger
+### Daljinsko voden model avtomobila
 
-A CAN bus logging device built around STM32.
+Projekt je bil razvit v sklopu diplomske naloge.
 
-**Hardware**
-- STM32F407
-- CAN transceiver
-- Custom PCB
+**Strojna oprema**
+- ATmega328P
+- nRF24L01
+- NEO-6M GPS module
+- ESC
+- servo motor
+- enkoderji, tipke, joystick-i
+- OLED zaslon
 
-**Software**
-- C
-- STM32 HAL
-- FreeRTOS
+**Programska oprema**
+- programski jezik C
+- Visual Studio Code
+- PlatformIO
+- KiCad
+- Inventor Professional
 
-[View Project](projects/can_logger.md)
-
-
----
-
-### ESP32 Sensor Node
-
-Low power wireless sensor platform.
-
-Technologies:
-- ESP32
-- BLE
-- MQTT
-
-
----
-
-## Links
-
+[Več o projektu](projects/daljinsko_voden_avtomobila.md)

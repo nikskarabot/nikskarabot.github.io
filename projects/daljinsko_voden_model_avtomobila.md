@@ -1,33 +1,51 @@
-# STM32 CAN Logger
+# Daljinsko voden model avtomobila
 
 
-## Overview
+## O tem
 
-A standalone CAN bus logging device.
-
-
-## Hardware
-
-- STM32F407
-- CAN transceiver
-- SD card storage
+Ta projekt je bil razvit v sklopu diplomske naloge. Pri tem sem naredil vse od programske opreme do posameznih tiskanih vezij. Tudi ohišja sem izdelal sam, razen modela formule. Dele sem natisnil s 3D-tiskalnikom.
 
 
-## Software
+**Strojna oprema**
+- ATmega328P
+- nRF24L01
+- NEO-6M GPS module
+- ESC
+- servo motor
+- enkoderji, tipke, joystick-i
+- OLED zaslon
 
+**Programska oprema**
 - C
-- STM32 HAL
-- FreeRTOS
+- Python
+- Visual Studio Code
+- PlatformIO
+- KiCad
+- Inventor Professional
 
 
 ## Features
 
-- 1 Mbps CAN support
-- Timestamped logging
-- USB data extraction
+- Implementacija s prekinitvami in enostavnim RTOS-om
+- končni avtomat stanj
+- izdelani 2 tiskani vezji
+- oddajnik in sprejemnik sprogramirana v C-ju
+- Python aplikacija
+- implementirana telemetrija
+- failsafe sistem
+- vodenje preko računalnika ter samostojno daljinsko vodenje
+- pridobivanje informacije o hitrosti iz GPS-modula
+- krmiljenje večih izhodnih naprav
+- PWM-krmiljenje motorja preko ESC-ja
+- izdelan popolnoma nov sistem paketnega komuniciranja
+- merjenje nivoja baterije....
 
 
 ## Koda
 
 [GitHub Repository](https://github.com/nikskarabot/Diploma)
 [GitHub Repository](https://github.com/nikskarabot/AppDiploma)
+
+## Diplomsko delo
+
+[Diplomsko delo](https://repozitorij.uni-lj.si/IzpisGradiva.php?id=182586&lang=slv)
