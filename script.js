@@ -3,7 +3,7 @@ let index = 0;
 
 function openGallery(project) {
 	if (project === "dvma") {
-		images = Array.from({ length: 51 }, (_, i) => `assets/dvma/slike/${i + 1}.jpg`);
+		images = Array.from({ length: 26 }, (_, i) => `assets/dvma/slike/${i + 1}.jpg`);
 	}
 
 	if (project === "makey") {
