@@ -2,21 +2,65 @@ let images = [];
 let index = 0;
 
 function openGallery(project) {
+
+
 	if (project === "dvma") {
-		images = Array.from({ length: 26 }, (_, i) => `assets/dvma/slike/${i + 1}.jpg`);
+
+		images = Array.from(
+			{ length: 26 },
+			(_, i) => `assets/dvma/slike/${i + 1}.jpg`
+		);
+
 	}
 
-	else if (project === "nu") {
-		images = Array.from({ length: 2 }, (_, i) => `assets/nu/slike/${i + 1}.jpg`);
+
+	if (project === "nu") {
+
+		images = Array.from(
+			{ length: 2 },
+			(_, i) => `assets/nu/slike/${i + 1}.jpg`
+		);
+
 	}
 
-	else if (project === "rvma") {
-		images = Array.from({ length: 1 }, (_, i) => `assets/rvma/slike/${i + 1}.jpg`);
+
+	if (project === "rvma") {
+
+		images = Array.from(
+			{ length: 1 },
+			(_, i) => `assets/rvma/slike/${i + 1}.jpg`
+		);
+
 	}
+
 
 	index = 0;
+
+
 	document.getElementById("modal").style.display = "block";
-	document.getElementById("modalImg").src = images[0];
+
+
+	loadImage();
+
+}
+
+function loadImage() {
+
+	const img = document.getElementById("modalImg");
+
+
+	img.style.opacity = 0;
+
+
+	img.onload = function(){
+
+		img.style.opacity = 1;
+
+	};
+
+
+	img.src = images[index];
+
 }
 
 function closeGallery() {
@@ -29,7 +73,7 @@ function change(dir) {
 	if (index < 0) index = images.length - 1;
 	if (index >= images.length) index = 0;
 
-	document.getElementById("modalImg").src = images[index];
+	loadImage();
 }
 
 function toggleProject(event, button) {
@@ -75,3 +119,57 @@ function toggleProjectCard(project) {
 
 }
 
+// =========================
+// MOBILE SWIPE GALLERY
+// =========================
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+
+const modalImage = document.getElementById("modalImg");
+
+
+modalImage.addEventListener("touchstart", function(event) {
+
+	touchStartX = event.changedTouches[0].screenX;
+
+});
+
+
+modalImage.addEventListener("touchend", function(event) {
+
+	touchEndX = event.changedTouches[0].screenX;
+
+	handleSwipe();
+
+});
+
+
+function handleSwipe() {
+
+	const swipeDistance = touchEndX - touchStartX;
+
+
+	// minimum swipe distance
+	if (Math.abs(swipeDistance) < 50) {
+		return;
+	}
+
+
+	// swipe left = next
+	if (swipeDistance < 0) {
+
+		change(1);
+
+	}
+
+
+	// swipe right = previous
+	else {
+
+		change(-1);
+
+	}
+
+}

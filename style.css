@@ -356,3 +356,152 @@ button:hover {
     height:18px;
     filter: invert(90%);
 }
+
+
+/* ========================= */
+/* MOBILE RESPONSIVE DESIGN  */
+/* ========================= */
+
+@media (max-width: 700px) {
+
+
+  body {
+
+    padding: 25px 12px;
+
+  }
+
+
+  h1 {
+
+    font-size: 32px;
+    text-align:center;
+
+  }
+
+
+  body > p {
+
+    text-align:center;
+
+  }
+
+
+  .project {
+
+    padding:18px;
+
+    border-radius:12px;
+
+    margin:12px 0;
+
+  }
+
+
+  .project h2 {
+
+    font-size:22px;
+
+  }
+
+
+  .project h3 {
+
+    font-size:17px;
+
+  }
+
+
+  ul {
+
+    padding-left:20px;
+
+  }
+
+
+  li {
+
+    margin-bottom:5px;
+
+  }
+
+
+  button {
+
+    width:100%;
+
+    padding:11px;
+
+  }
+
+
+  .project-links {
+
+    flex-direction:column;
+
+  }
+
+
+  .project-links a {
+
+    justify-content:center;
+
+  }
+
+
+  /* Gallery */
+
+  .modal img {
+
+    max-width:95%;
+
+    max-height:75%;
+
+  }
+
+
+  .prev,
+  .next {
+
+    font-size:34px;
+
+  }
+
+
+  .prev {
+
+    left:10px;
+
+  }
+
+
+  .next {
+
+    right:10px;
+
+  }
+
+
+}
+
+.modal img {
+
+  transition: opacity .2s ease;
+
+}
+
+@media (max-width:700px){
+
+.project:hover:not(.expanded){
+
+    transform:none;
+
+}
+
+}
+
+.modal img {
+
+	touch-action: pan-y;
+
+}
