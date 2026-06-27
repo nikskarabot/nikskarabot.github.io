@@ -2,30 +2,31 @@ let images = [];
 let index = 0;
 
 function openGallery(project) {
-  images = [];
+	if (project === "dvma") {
+		images = Array.from({ length: 51 }, (_, i) => `assets/dvma/slike/${i + 1}.jpg`);
+	}
 
-  const base = `assets/${project}/slike`;
+	if (project === "makey") {
+		images = [
+			"assets/makey/slike/1.jpg",
+			"assets/makey/slike/2.jpg"
+		];
+	}
 
-  // try loading images 1–20 (adjust if needed)
-  for (let i = 1; i <= 20; i++) {
-    images.push(`${base}/${i}.jpg`);
-  }
-
-  index = 0;
-
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modalImg").src = images[index];
+	index = 0;
+	document.getElementById("modal").style.display = "block";
+	document.getElementById("modalImg").src = images[0];
 }
 
 function closeGallery() {
-  document.getElementById("modal").style.display = "none";
+	document.getElementById("modal").style.display = "none";
 }
 
 function change(dir) {
-  index += dir;
+	index += dir;
 
-  if (index < 0) index = images.length - 1;
-  if (index >= images.length) index = 0;
+	if (index < 0) index = images.length - 1;
+	if (index >= images.length) index = 0;
 
-  document.getElementById("modalImg").src = images[index];
+	document.getElementById("modalImg").src = images[index];
 }
