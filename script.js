@@ -31,3 +31,22 @@ function change(dir) {
 
 	document.getElementById("modalImg").src = images[index];
 }
+
+function toggleProject(button) {
+
+	const details = button.nextElementSibling;
+
+	if (details.classList.contains("open")) {
+
+		details.classList.remove("open");
+		button.innerHTML = "View details ↓";
+
+	}
+	else {
+
+		details.classList.add("open");
+		button.innerHTML = "Hide details ↑";
+
+	}
+
+}

@@ -4,126 +4,252 @@ body {
   background: #0b0f14;
   color: #e6e6e6;
   line-height: 1.6;
-}
 
-/* layout container feel */
-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   padding: 40px 20px;
 }
 
-/* HEADER */
+
 h1 {
   font-size: 44px;
   margin-bottom: 5px;
-  color: #ffffff;
-  letter-spacing: 0.5px;
+  color: white;
 }
 
-p {
+
+body > p {
   color: #9aa4af;
-  margin-top: 0;
 }
 
-/* PROJECT CARDS */
+
+
+/* PROJECT CARD */
+
 .project {
+
   width: 100%;
   max-width: 820px;
-  background: linear-gradient(145deg, #111826, #0d121b);
-  border: 1px solid #1f2a37;
-  border-radius: 14px;
-  padding: 22px;
-  margin: 14px 0;
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  background:
+  linear-gradient(145deg,#111826,#0d121b);
+
+  border:1px solid #1f2a37;
+
+  border-radius:14px;
+
+  padding:22px;
+
+  margin:14px 0;
+
+  box-shadow:
+  0 8px 20px rgba(0,0,0,0.25);
+
 }
 
-/* headings */
+
+
 .project h2 {
-  margin-top: 0;
-  color: #ffffff;
+
+  margin-top:0;
+  color:white;
+
 }
+
 
 .project h3 {
-  color: #b6c2cf;
-  margin-bottom: 6px;
+
+  color:#b6c2cf;
+
 }
 
-/* lists */
-ul {
-  margin-top: 6px;
-  margin-bottom: 16px;
-  color: #cbd5e1;
+
+
+/* SHORT DESCRIPTION */
+
+.project > p {
+
+  color:#9aa4af;
+
 }
 
-/* BUTTON (slight accent, not neon) */
+
+
+/* EXPAND BUTTON */
+
+.expand-btn {
+
+  background:none;
+
+  border:none;
+
+  color:#60a5fa;
+
+  padding:0;
+
+  font-size:15px;
+
+}
+
+
+.expand-btn:hover {
+
+  background:none;
+
+  color:#93c5fd;
+
+  transform:none;
+
+}
+
+
+
+/* DETAILS */
+
+.project-details {
+
+  max-height:0;
+
+  overflow:hidden;
+
+  opacity:0;
+
+  transition:
+  max-height .35s ease,
+  opacity .25s ease;
+
+  border-top:1px solid transparent;
+
+}
+
+
+
+.project-details.open {
+
+  max-height:700px;
+
+  opacity:1;
+
+  margin-top:20px;
+
+  padding-top:15px;
+
+  border-top:1px solid #263241;
+
+}
+
+
+
+/* NORMAL BUTTONS */
+
 button {
-  background: transparent;
-  color: #cbd5e1;
-  border: 1px solid #2b6cff;
-  padding: 9px 13px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s ease;
-  font-weight: 500;
+
+  background:transparent;
+
+  color:#cbd5e1;
+
+  border:1px solid #2b6cff;
+
+  padding:9px 13px;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+  transition:.2s;
+
 }
+
 
 button:hover {
-  background: #2b6cff;
-  color: white;
-  transform: translateY(-1px);
+
+  background:#2b6cff;
+
+  color:white;
+
+  transform:translateY(-1px);
+
 }
+
+
+
 
 /* MODAL */
+
 .modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(5, 8, 12, 0.95);
-  z-index: 9999;
-  text-align: center;
+
+  display:none;
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(5,8,12,.95);
+
+  z-index:9999;
+
+  text-align:center;
+
 }
+
 
 .modal img {
-  max-width: 92%;
-  max-height: 86%;
-  margin-top: 3%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+  max-width:92%;
+
+  max-height:86%;
+
+  margin-top:3%;
+
+  border-radius:10px;
+
 }
 
-/* close button */
+
+
+/* ARROWS */
+
+.prev,.next {
+
+  position:absolute;
+
+  top:50%;
+
+  transform:translateY(-50%);
+
+  font-size:42px;
+
+  color:white;
+
+  cursor:pointer;
+
+}
+
+
+.prev {
+ left:18px;
+}
+
+
+.next {
+ right:18px;
+}
+
+
 .close {
-  position: absolute;
-  top: 14px;
-  right: 22px;
-  font-size: 30px;
-  cursor: pointer;
-  color: #ffffff;
-  opacity: 0.8;
-}
 
-.close:hover {
-  opacity: 1;
-}
+ position:absolute;
 
-/* arrows */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 42px;
-  cursor: pointer;
-  color: white;
-  opacity: 0.7;
-  user-select: none;
-}
+ top:14px;
 
-.prev:hover, .next:hover {
-  opacity: 1;
-}
+ right:22px;
 
-.prev { left: 18px; }
-.next { right: 18px; }
+ font-size:30px;
+
+ cursor:pointer;
+
+ color:white;
+
+}
