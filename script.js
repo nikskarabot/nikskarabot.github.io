@@ -6,11 +6,12 @@ function openGallery(project) {
 		images = Array.from({ length: 26 }, (_, i) => `assets/dvma/slike/${i + 1}.jpg`);
 	}
 
-	if (project === "makey") {
-		images = [
-			"assets/makey/slike/1.jpg",
-			"assets/makey/slike/2.jpg"
-		];
+	if (project === "nu") {
+		images = Array.from({ length: 2 }, (_, i) => `assets/nu/slike/${i + 1}.jpg`);
+	}
+
+	if (project === "rvma") {
+		images = Array.from({ length: 1 }, (_, i) => `assets/rvma/slike/${i + 1}.jpg`);
 	}
 
 	index = 0;
