@@ -253,3 +253,100 @@ button:hover {
  color:white;
 
 }
+
+
+/* PROJECT LINKS */
+
+.project-links {
+
+	display:flex;
+
+	flex-wrap:wrap;
+
+	gap:10px;
+
+	margin:15px 0;
+
+}
+
+
+
+.project-links a {
+
+	display:inline-flex;
+
+	align-items:center;
+
+	gap:7px;
+
+	padding:8px 12px;
+
+	border-radius:8px;
+
+	border:1px solid #27364d;
+
+	color:#cbd5e1;
+
+	text-decoration:none;
+
+	background:#111826;
+
+	transition:.2s;
+
+	font-size:14px;
+
+}
+
+
+
+.project-links a:hover {
+
+	border-color:#2b6cff;
+
+	color:white;
+
+	background:#172033;
+
+	transform:translateY(-1px);
+
+}
+
+
+
+.github-icon {
+
+	font-size:18px;
+
+	color:white;
+
+}
+
+
+/* PROJECT HOVER EFFECT */
+
+.project {
+	cursor: pointer;
+	transition:
+		border-color .25s ease,
+		transform .25s ease,
+		box-shadow .25s ease;
+}
+
+
+.project:hover:not(.expanded) {
+
+	border-color:#3b82f6;
+
+	box-shadow:
+	0 10px 25px rgba(0,0,0,0.35);
+
+	transform:translateY(-2px);
+
+}
+
+
+/* when expanded remove cursor feeling */
+
+.project.expanded {
+	cursor:default;
+}

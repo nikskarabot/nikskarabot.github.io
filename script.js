@@ -6,11 +6,11 @@ function openGallery(project) {
 		images = Array.from({ length: 26 }, (_, i) => `assets/dvma/slike/${i + 1}.jpg`);
 	}
 
-	if (project === "nu") {
+	else if (project === "nu") {
 		images = Array.from({ length: 2 }, (_, i) => `assets/nu/slike/${i + 1}.jpg`);
 	}
 
-	if (project === "rvma") {
+	else if (project === "rvma") {
 		images = Array.from({ length: 1 }, (_, i) => `assets/rvma/slike/${i + 1}.jpg`);
 	}
 
@@ -32,21 +32,45 @@ function change(dir) {
 	document.getElementById("modalImg").src = images[index];
 }
 
-function toggleProject(button) {
+function toggleProject(event, button) {
+
+	event.stopPropagation();
 
 	const details = button.nextElementSibling;
+	const project = button.closest(".project");
+
+
+	details.classList.toggle("open");
+	project.classList.toggle("expanded");
+
 
 	if (details.classList.contains("open")) {
-
-		details.classList.remove("open");
-		button.innerHTML = "View details ↓";
-
+		button.innerHTML = "Hide details ↑";
 	}
 	else {
+		button.innerHTML = "View details ↓";
+	}
 
-		details.classList.add("open");
+}
+
+
+
+function toggleProjectCard(project) {
+
+	const button = project.querySelector(".expand-btn");
+
+	const details = project.querySelector(".project-details");
+
+
+	details.classList.toggle("open");
+	project.classList.toggle("expanded");
+
+
+	if (details.classList.contains("open")) {
 		button.innerHTML = "Hide details ↑";
-
+	}
+	else {
+		button.innerHTML = "View details ↓";
 	}
 
 }

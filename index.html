@@ -4,6 +4,8 @@
 <head>
 	<title>Nik Škarabot | Portfolio</title>
 	<link rel="stylesheet" href="./style.css">
+
+	<script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,7 +15,7 @@
 
 
 	<!-- PROJECT 1 -->
-	<div class="project">
+	<div class="project" onclick="toggleProjectCard(this)">
 
 		<h2>Daljinsko voden model avtomobila</h2>
 
@@ -24,7 +26,7 @@
 		</p>
 
 
-		<button class="expand-btn" onclick="toggleProject(this)">
+		<button class="expand-btn" onclick="toggleProject(event, this)">
 			View details ↓
 		</button>
 
@@ -52,8 +54,28 @@
 				<li>Inventor Professional</li>
 			</ul>
 
+			<div class="project-links">
 
-			<button onclick="openGallery('dvma')">
+				<a href="https://github.com/nikskarabot/Diploma" target="_blank" onclick="event.stopPropagation()"></a>
+					<i class="fa-brands fa-github"></i>
+					C koda
+				</a>
+
+				<a href="https://github.com/nikskarabot/AppDiploma" target="_blank" onclick="event.stopPropagation()"></a>
+					<i class="fa-brands fa-github"></i>
+					Python aplikacija
+				</a>
+
+
+				<a href="https://repozitorij.uni-lj.si/IzpisGradiva.php?id=182586&lang=slv"
+				target="_blank">
+					📄 Diploma thesis
+				</a>
+
+			</div>
+
+
+			<button onclick="event.stopPropagation(); openGallery('dvma')">
 				📷 View gallery
 			</button>
 
@@ -64,7 +86,7 @@
 
 
 	<!-- PROJECT 2 -->
-	<div class="project">
+	<div class="project" onclick="toggleProjectCard(this)">
 
 		<h2>Enostaven RC-avtomobil</h2>
 
@@ -74,7 +96,7 @@
 		</p>
 
 
-		<button class="expand-btn" onclick="toggleProject(this)">
+		<button class="expand-btn" onclick="toggleProject(event, this)">
 			View details ↓
 		</button>
 
@@ -95,8 +117,7 @@
 				<li>Arduino okolje</li>
 			</ul>
 
-
-			<button onclick="openGallery('rvma')">
+			<button onclick="event.stopPropagation(); openGallery('rvma')">
 				📷 View gallery
 			</button>
 
@@ -107,7 +128,7 @@
 
 
 	<!-- PROJECT 3 -->
-	<div class="project">
+	<div class="project" onclick="toggleProjectCard(this)">
 
 		<h2>Napetostni usmernik</h2>
 
@@ -117,7 +138,7 @@
 		</p>
 
 
-		<button class="expand-btn" onclick="toggleProject(this)">
+		<button class="expand-btn" onclick="toggleProject(event, this)">
 			View details ↓
 		</button>
 
@@ -131,7 +152,7 @@
 			</ul>
 
 
-			<button onclick="openGallery('nu')">
+			<button onclick="event.stopPropagation(); openGallery('nu')">
 				📷 View gallery
 			</button>
 
