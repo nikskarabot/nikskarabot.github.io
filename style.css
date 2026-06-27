@@ -2,22 +2,17 @@ body {
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 
     margin:0;
-
     padding:40px 20px;
 
     background:#0b0f14;
-
     color:#e6e6e6;
 
     line-height:1.6;
 
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
 }
-
 
 
 /* HEADER */
@@ -25,11 +20,9 @@ body {
 h1 {
 
     font-size:44px;
-
     margin:0;
 
     color:white;
-
     text-align:center;
 
 }
@@ -40,7 +33,6 @@ body > p {
     color:#9aa4af;
 
     margin-top:5px;
-
     margin-bottom:35px;
 
     text-align:center;
@@ -56,49 +48,32 @@ body > p {
 .project {
 
     width:100%;
-
     max-width:820px;
 
     box-sizing:border-box;
 
-
     background:
     linear-gradient(145deg,#111826,#0d121b);
-
 
     border:1px solid #1f2a37;
 
     border-radius:14px;
 
-
     padding:24px;
 
-
     margin-bottom:18px;
-
 
     box-shadow:
     0 8px 20px rgba(0,0,0,.25);
 
-
     cursor:pointer;
 
-
-    transition:.25s;
-
-}
-
-
-
-.project:hover:not(.expanded) {
-
-    border-color:#3b82f6;
-
-    transform:translateY(-2px);
+    transition:
+    border-color .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
 
 }
-
-
 
 
 
@@ -129,6 +104,7 @@ body > p {
     color:#9aa4af;
 
 }
+
 
 
 
@@ -207,24 +183,21 @@ body > p {
 
     gap:8px;
 
-
     padding:8px 12px;
 
-
     border-radius:8px;
-
 
     background:#111826;
 
     border:1px solid #27364d;
 
-
     color:#cbd5e1;
 
     text-decoration:none;
 
-
     font-size:14px;
+
+    transition:.2s ease;
 
 }
 
@@ -260,15 +233,7 @@ button {
 
     cursor:pointer;
 
-}
-
-
-
-button:hover {
-
-    background:#2b6cff;
-
-    color:white;
+    transition:.2s ease;
 
 }
 
@@ -278,7 +243,6 @@ button:hover {
 
 /* GALLERY */
 
-
 .modal {
 
     display:none;
@@ -287,13 +251,10 @@ button:hover {
 
     inset:0;
 
-
     background:
     rgba(5,8,12,.97);
 
-
     z-index:9999;
-
 
     align-items:center;
 
@@ -309,12 +270,9 @@ button:hover {
 
     max-height:86%;
 
-
     object-fit:contain;
 
-
     border-radius:10px;
-
 
     transition:.2s;
 
@@ -329,7 +287,6 @@ button:hover {
     top:15px;
 
     right:20px;
-
 
     font-size:32px;
 
@@ -346,28 +303,70 @@ button:hover {
 
     top:50%;
 
-
     transform:translateY(-50%);
-
 
     color:white;
 
     font-size:40px;
+
+    cursor:pointer;
 
 }
 
 
 
 .prev {
-
     left:20px;
-
 }
 
 
 .next {
-
     right:20px;
+}
+
+
+
+
+
+/* DESKTOP ONLY HOVER */
+
+@media (hover:hover) {
+
+
+    .project:hover:not(.expanded) {
+
+        border-color:#3b82f6;
+
+        transform:translateY(-3px);
+
+        box-shadow:
+        0 12px 30px rgba(0,0,0,.4);
+
+    }
+
+
+    .project-links a:hover {
+
+        padding-left:16px;
+
+        padding-right:16px;
+
+        border-color:#2b6cff;
+
+        color:white;
+
+    }
+
+
+    button:hover {
+
+        background:#2b6cff;
+
+        color:white;
+
+        transform:translateY(-2px);
+
+    }
 
 }
 
@@ -376,7 +375,7 @@ button:hover {
 
 
 /* ================================================= */
-/*                     MOBILE                        */
+/* MOBILE */
 /* ================================================= */
 
 
@@ -419,12 +418,9 @@ body > p {
 
     padding:18px;
 
-
     border-radius:18px;
 
-
     margin-bottom:14px;
-
 
     box-shadow:
     0 5px 15px rgba(0,0,0,.25);
@@ -478,7 +474,6 @@ li {
 
 
 
-/* DETAILS BUTTON */
 
 .expand-btn {
 
@@ -490,7 +485,7 @@ li {
 
 
 
-/* LINKS STACK */
+
 
 .project-links {
 
@@ -516,7 +511,22 @@ li {
 
 
 
-/* GALLERY PHONE MODE */
+/* Gallery button */
+
+.project-details button {
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    font-size:16px;
+
+}
+
+
+
 
 
 .modal {
@@ -531,11 +541,7 @@ li {
 
     width:100vw;
 
-    height:auto;
-
-
     max-height:85vh;
-
 
     border-radius:0;
 
@@ -546,11 +552,9 @@ li {
 .prev,
 .next {
 
-
     width:45px;
 
     height:45px;
-
 
     display:flex;
 
@@ -558,32 +562,24 @@ li {
 
     justify-content:center;
 
-
     border-radius:50%;
-
 
     background:rgba(0,0,0,.45);
 
-
     font-size:28px;
-
 
 }
 
 
 
 .prev {
-
     left:10px;
-
 }
 
 
 
 .next {
-
     right:10px;
-
 }
 
 
@@ -600,11 +596,46 @@ li {
 
 
 
-.project:hover:not(.expanded) {
-
-    transform:none;
-
 }
 
+
+
+/* REMOVE TOUCH HOVER */
+
+@media (hover:none) {
+
+
+    .project:hover:not(.expanded) {
+
+        border-color:#1f2a37;
+
+        transform:none;
+
+        box-shadow:
+        0 8px 20px rgba(0,0,0,.25);
+
+    }
+
+
+    .project-links a:hover {
+
+        padding:12px;
+
+        border-color:#27364d;
+
+        color:#cbd5e1;
+
+    }
+
+
+    button:hover {
+
+        background:transparent;
+
+        color:#cbd5e1;
+
+        transform:none;
+
+    }
 
 }
