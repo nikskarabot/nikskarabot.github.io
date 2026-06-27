@@ -74,3 +74,4 @@ function toggleProjectCard(project) {
 	}
 
 }
+

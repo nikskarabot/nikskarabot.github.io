@@ -350,3 +350,9 @@ button:hover {
 .project.expanded {
 	cursor:default;
 }
+
+.github-logo {
+    width:18px;
+    height:18px;
+    filter: invert(90%);
+}
